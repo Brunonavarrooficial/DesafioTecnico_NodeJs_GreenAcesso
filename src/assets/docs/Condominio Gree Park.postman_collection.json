@@ -1,0 +1,155 @@
+{
+	"info": {
+		"_postman_id": "677c2964-2b02-4087-adf3-12681903022b",
+		"name": "Condominio Gree Park",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21955415",
+		"_collection_link": "https://planetary-spaceship-650808.postman.co/workspace/39cf83eb-22ac-44c1-9f4f-adeb5335a4b1/collection/21955415-677c2964-2b02-4087-adf3-12681903022b?action=share&creator=21955415&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Get Boletos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/boletos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"boletos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Filter Boletos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/boletos/filter?nome=JOSE&valor_inicial=100&valor_final=200&id_lote=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"boletos",
+						"filter"
+					],
+					"query": [
+						{
+							"key": "nome",
+							"value": "JOSE"
+						},
+						{
+							"key": "valor_inicial",
+							"value": "100"
+						},
+						{
+							"key": "valor_final",
+							"value": "200"
+						},
+						{
+							"key": "id_lote",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Boletos Report PDF",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/boletos/report?relatorio=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"boletos",
+						"report"
+					],
+					"query": [
+						{
+							"key": "relatorio",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Import Boletos CSV",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/E:/projectDeveloper/BrincandoComChatGPT/projeto_nodejs_desafio_tecnico/uploads/boletos.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/boletos/import",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"boletos",
+						"import"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Import Boletos PDF",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/E:/projectDeveloper/BrincandoComChatGPT/projeto_nodejs_desafio_tecnico/uploads/boletos_pdf.pdf"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/boletos/import/pdf",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"boletos",
+						"import",
+						"pdf"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
